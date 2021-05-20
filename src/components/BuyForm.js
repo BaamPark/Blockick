@@ -19,6 +19,7 @@ class BuyForm extends Component {
           etherAmount = this.input.value.toString()
           etherAmount = window.web3.utils.toWei(etherAmount, 'Ether')
           this.props.buyTokens(etherAmount) //App.js 파일에 정의했음
+           
         }}>
         <div>
           <label className="float-left"><b>Input</b></label>

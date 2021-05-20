@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import BuyForm from './BuyForm'
 import SellForm from './SellForm'
 import Kick from './Kick'
+import UserList from './UserList'
 
 class Main extends Component {
   constructor(props) {
@@ -64,7 +65,7 @@ class Main extends Component {
                 this.setState({ currentForm: 'kick' })
               }}
             >
-            kick
+            Kick
           </button>
           
         </div>
@@ -74,11 +75,16 @@ class Main extends Component {
           <div className="card-body">
 
             {content}
-
           </div>
 
         </div>
-
+        <UserList/>
+        <p>Click <a href="http://192.168.0.52/">here</a> after you kick with your token.</p>
+        {/* <a href = "http://192.168.0.52/"
+                onClick={(event) => {
+                  window.alert("User and Password will recieve after you kick")
+                }}>
+                  <p3>Click here and Unlock</p3></a> */}
       </div>
     );
   }

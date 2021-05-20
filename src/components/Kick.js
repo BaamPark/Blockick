@@ -24,7 +24,7 @@ class Kick extends Component {
             receiver = this.state.receiver
             this.props.kickTokens(receiver, etherAmount)
             console.log(receiver)
-            window.alert("your payment has been done")
+            {window.alert("Your ID is 'admin' \ Your password is 'admin")}
         }}>
        <div>
           <label className="float-left"><b>Input</b></label>
@@ -38,7 +38,7 @@ class Kick extends Component {
             onChange={(event) => {
               const tokenAmount = this.input.value.toString()
               this.setState({
-                output: tokenAmount / 100
+                output: tokenAmount / 10 +" minutes", 
               })
             }}
             ref={(input) => { this.input = input }}
@@ -53,10 +53,10 @@ class Kick extends Component {
           </div>
         </div>
         <div>
-          <label className="float-left"><b>Output</b></label>
-          <span className="float-right text-muted">
+          <label className="float-left"><b>You can ride for..</b></label>
+          {/* <span className="float-right text-muted">
             Balance: {window.web3.utils.fromWei(this.props.ethBalance, 'Ether')}
-          </span>
+          </span> */}
         </div>
         <div className="input-group mb-2">
           <input
@@ -68,15 +68,15 @@ class Kick extends Component {
           />
           <div className="input-group-append">
             <div className="input-group-text">
-              <img src={ethLogo} height='32' alt=""/>
-                  ETH
+              {/* <img src={ethLogo} height='32' alt=""/>
+                  ETH */}
             </div>
           </div>
         </div>
-        <div className="mb-5">
+        {/* <div className="mb-5">
           <span className="float-left text-muted">Exchange Rate</span>
           <span className="float-right text-muted">100 DApp = 1 ETH</span>
-        </div>
+        </div> */}
 
         <label className="float-left"><b>Receiver</b></label>
         <div className="input-group mb-4">
@@ -107,6 +107,7 @@ class Kick extends Component {
           </div>
         </div>
         <button type="submit" className="btn btn-primary btn-block btn-lg">Pay!</button> {/*type이 submit */} 
+        {/* {window.open("http://192.168.0.52/")} */}
       </form>
     );
   }

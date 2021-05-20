@@ -33,12 +33,11 @@ class ContactCreate extends Component{
     render() {
         return(
             <div>
-                <h2>Create Contact</h2>
                 <p>
-                    <input type="text" name="name" placeholder="name" value={this.state.name} onChange={this.handleChange}/>
-                    <input type="text" name="amount" placeholder="amount" value={this.state.amount} onChange={this.handleChange}/>
+                    <input className="input-group mb-4" type="text" name="name" placeholder="adress" value={this.state.name} onChange={this.handleChange}/>
+                    {/* <input type="text" name="amount" placeholder="amount" value={this.state.amount} onChange={this.handleChange}/> */}
                 </p>
-                <button onClick={this.handleClick}>Create</button>
+                <button className="btn btn-primary btn-block btn-lg" onClick={this.handleClick}>Create</button>
             </div>
         )
     }

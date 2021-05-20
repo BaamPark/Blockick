@@ -12,7 +12,7 @@ class App extends Component {
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData() 
-  }
+  } 
 
   async loadBlockchainData() {
     const web3 = window.web3 //shorthandize window.web3 to web3
@@ -50,10 +50,10 @@ class App extends Component {
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
-      await window.ethereum.enable()
+      await window.ethereum.enable() //Metamask pop up says do you want to give access to this Dapp
     }
     else if (window.web3) {
-      window.web3 = new Web3(window.web3.currentProvider)
+      window.web3 = new Web3(window.web3.currentProvider) //window.web3.currentProvider allows you access the MetaMask provider
     }
     else {
       window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
@@ -94,6 +94,8 @@ class App extends Component {
     }
   }
 
+ 
+
   
 
   render() {
@@ -129,8 +131,7 @@ class App extends Component {
                 </a>
 
                 {content} {/*content is a variable declared at line 96*/}
-                {/* {document.location.reload()}   */}
-                <UserList/>
+                {/* {document.location.reload()}   */}                  
               </div>
             </main>
           </div>
